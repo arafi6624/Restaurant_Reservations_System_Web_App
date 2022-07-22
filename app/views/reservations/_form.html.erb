@@ -1,0 +1,45 @@
+<div class="form">
+  <%= form_with(model: reservation) do |form| %>
+    <% if reservation.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+        <ul>
+          <% reservation.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= form.label "Full Name", style: "display: block", class:"form-label" %>
+      <%= form.text_field :name, class:"form-control" %>
+    </div><br>
+
+    <div class="form-group">
+      <%= form.label "Number of People", style: "display: block", class:"form-label" %>
+      <%= form.number_field :people, class:"form-control"%>
+    </div><br>
+
+    <div class="form-group">
+      <%= form.label "Number of Tables", style: "display: block", class:"form-label" %>
+      <%= form.number_field :tables, class:"form-control" %>
+    </div><br>
+
+    <div class="form-group">
+      <%= form.label :date, style: "display: block", class:"form-label" %>
+      <%= form.date_field :date, class:"form-control" %>
+    </div><br>
+
+    <div class="form-group">
+      <%= form.label :time, style: "display: block", class:"form-label" %>
+      <%= form.time_field :time, class:"form-control" %>
+    </div><br>
+
+    <div class="form-group">
+      <%= form.submit class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+

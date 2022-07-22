@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="jumbotron">
+  <h1 class="display-4"><strong>Reservation for:</strong> <%= @reservation.name %></h1><br>
+  <p class="lead"><strong>Number of people:</strong> <%= @reservation.people %></p>
+  <p class="lead"><strong>Number of tables:</strong> <%= @reservation.tables %></p>
+  <p class="lead"><strong>Date:</strong> <%= @reservation.date.strftime("%a, %b %d, %Y") %></p>
+  <p class="lead"><strong>Time:</strong> <%= @reservation.time.strftime("%-I %p") %></p>
+</div>
+
+<div>
+  <%= link_to "Edit this reservation", edit_reservation_path(@reservation), class:"btn btn-warning col-sm-2" %>
+  <%= link_to "Back to reservations", reservations_path, class:"btn btn-secondary col-sm-2"%><br><br>
+  <%= button_to "Delete this reservation", @reservation, method: :delete, class:"btn btn-danger col-sm-2" %>
+</div>

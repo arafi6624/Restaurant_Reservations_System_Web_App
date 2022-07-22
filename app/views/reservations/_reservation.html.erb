@@ -1,0 +1,28 @@
+
+<div id="<%= dom_id reservation %>">
+  <tr>
+    <td>
+      <%= reservation.name %>
+    </td>
+
+    <td>
+      <%= reservation.people %>
+    </td>
+
+    <td>
+      <%= reservation.tables %>
+    </td>
+
+    <td>
+      <%= reservation.date.strftime("%m/%d/%y") %>
+    </td>
+
+    <td>
+      <%= reservation.time.strftime("%-I %p") %>
+    </td>
+    <td>
+      <%= link_to "Details", reservation, class:"btn btn-info btn-sm" %>
+    </td>
+  </tr>
+</div>
+
