@@ -1,24 +1,29 @@
 # README
+This is a simple restaurant reservations system web application which allows restaurant employees 
+to take reservation orders over the phone and input them manually into the application to keep a 
+digital track of their availability.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application was implemented using the following:
+* Ruby version 2.7.5
+* Rails version 7.0.3.1
+* Bootstrap v5.2.0
 
-Things you may want to cover:
+Navigation:
+![](demos/Navigation.gif)
 
-* Ruby version
+Form Submission Success:
+![](demos/Form_Success.gif)
 
-* System dependencies
+Form Edit Success:
+![](demos/Form_Edit.gif)
 
-* Configuration
+Blank Form Submission Errors:
+![](demos/Blank_Form.gif)
 
-* Database creation
+Wrong Date Submission Error:
+![](demos/Wrong_Date.gif)
 
-* Database initialization
+Table Limit Exceeded Error:
+![](demos/Max_Tables.gif)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
